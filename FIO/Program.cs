@@ -8,9 +8,9 @@ namespace FIO
         {
             Console.Write("Введите имя: ");
             string firstName = Console.ReadLine(); //name
-            Console.Write("Введите фамилию: ");
-            string middleName = Console.ReadLine(); //patronymic
             Console.Write("Введите отчество: ");
+            string middleName = Console.ReadLine(); //patronymic
+            Console.Write("Введите фамилию: ");
             string lastName = Console.ReadLine(); //surname, familyname
 
             // полностью Имя Отчество Фамилия
@@ -49,9 +49,11 @@ namespace FIO
 
         static string GetForLogin(string firstName, string middleName, string lastName)
         {
-            return (lastName.Substring(0, Math.Min(5, lastName.Length)) + "_" +
+            return (
+                lastName.Substring(0, Math.Min(5, lastName.Length)) + "_" +
                 firstName.Substring(0, Math.Min(2, firstName.Length)) + "_" +
-                middleName.Substring(0, Math.Min(3, middleName.Length))).ToLower();
+                middleName.Substring(0, Math.Min(3, middleName.Length))
+            ).ToLower();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace RandomChain
 
         static void PrintRandom()
         {
-            var seed = 989284929;
+            var seed = 123;
             var n = 100;
             var random = new Random(seed);
             for (int i = 0; i < n; i++)

@@ -10,7 +10,7 @@ namespace Outsider
             int guestsCount = 25;
             double friendshipRate = 0.2;
 
-            var friends = GenerateFriends(guestsCount, friendshipRate);
+            int[][] friends = GenerateFriends(guestsCount, friendshipRate);
             bool[,] friendshipMatrix = new bool[guestsCount, guestsCount];
             for (int g = 0; g < friends.Length; g++)
             {
